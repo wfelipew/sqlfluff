@@ -3,7 +3,7 @@
 # computed by SQLFluff when running the tests. Please run
 # `python test/generate_parse_fixture_yml.py`  to generate them after adding or
 # altering SQL files.
-_hash: 50388a33fb2bcd042326afb6cea67123b1ea13d9154d912d05051888e92f624b
+_hash: cd39db183d3aedf76e132e83650d53b4936d72785a5fc05a038b297c0312cc79
 file:
 - statement:
     alter_table_statement:
@@ -465,4 +465,121 @@ file:
           column_reference:
             quoted_identifier: '`yk`'
           end_bracket: )
+- statement_terminator: ;
+- statement:
+    alter_table_statement:
+    - keyword: ALTER
+    - keyword: TABLE
+    - table_reference:
+        quoted_identifier: '`users`'
+    - keyword: ADD
+    - keyword: COLUMN
+    - column_definition:
+        quoted_identifier: '`active`'
+        data_type:
+          data_type_identifier: tinyint
+          bracketed_arguments:
+            bracketed:
+              start_bracket: (
+              numeric_literal: '1'
+              end_bracket: )
+        column_constraint_segment:
+          keyword: DEFAULT
+          quoted_literal: "'0'"
+    - comma: ','
+    - parameter: ALGORITHM
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: INSTANT
+    - comma: ','
+    - parameter: LOCK
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: NONE
+- statement_terminator: ;
+- statement:
+    alter_table_statement:
+    - keyword: ALTER
+    - keyword: TABLE
+    - table_reference:
+        quoted_identifier: '`users`'
+    - keyword: ADD
+    - keyword: COLUMN
+    - keyword: IF
+    - keyword: NOT
+    - keyword: EXISTS
+    - column_definition:
+        quoted_identifier: '`active`'
+        data_type:
+          data_type_identifier: tinyint
+          bracketed_arguments:
+            bracketed:
+              start_bracket: (
+              numeric_literal: '1'
+              end_bracket: )
+        column_constraint_segment:
+          keyword: DEFAULT
+          quoted_literal: "'0'"
+    - comma: ','
+    - parameter: ALGORITHM
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: INSTANT
+    - comma: ','
+    - parameter: LOCK
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: NONE
+- statement_terminator: ;
+- statement:
+    alter_table_statement:
+    - keyword: ALTER
+    - keyword: TABLE
+    - table_reference:
+        quoted_identifier: '`users`'
+    - keyword: ADD
+    - keyword: COLUMN
+    - column_definition:
+        quoted_identifier: '`active`'
+        data_type:
+          data_type_identifier: tinyint
+          bracketed_arguments:
+            bracketed:
+              start_bracket: (
+              numeric_literal: '1'
+              end_bracket: )
+        column_constraint_segment:
+          keyword: DEFAULT
+          quoted_literal: "'0'"
+    - comma: ','
+    - parameter: ALGORITHM
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: INSTANT
+- statement_terminator: ;
+- statement:
+    alter_table_statement:
+    - keyword: ALTER
+    - keyword: TABLE
+    - table_reference:
+        quoted_identifier: '`users`'
+    - keyword: ADD
+    - keyword: COLUMN
+    - column_definition:
+        quoted_identifier: '`active`'
+        data_type:
+          data_type_identifier: tinyint
+          bracketed_arguments:
+            bracketed:
+              start_bracket: (
+              numeric_literal: '1'
+              end_bracket: )
+        column_constraint_segment:
+          keyword: DEFAULT
+          quoted_literal: "'0'"
+    - comma: ','
+    - parameter: LOCK
+    - comparison_operator:
+        raw_comparison_operator: '='
+    - naked_identifier: NONE
 - statement_terminator: ;
